@@ -474,10 +474,10 @@ Rise time ($t_r$) is the time it takes the output to move from 10% → 90% of it
 Some design methodologies instead use 30% ↔ 70% thresholds depending on the specification requirements.
 
 ```
-meas tran tpr when nfet_in=0.35 RISE=1 : Measures the rise time (tpr) when the input voltage reaches 0.35V
-meas tran tpf when nfet_out=0.35 FALL=1 : Measures the fall time (tpf) when the output voltage reaches 0.35V. 
-let tp = (tpf + tpr)/2 : Calculates the average propagation delay (tp) as the mean of the rise and fall times.
-print tp : prints the Propagation Delay
+meas tran tpr when nfet_in=0.35 RISE=1 
+meas tran tpf when nfet_out=0.35 FALL=1 
+let tp = (tpf + tpr)/2 
+print tp 
 ```
 
 **Gain (Av)**
@@ -507,6 +507,81 @@ let nmh = voh - vih
 let nml = vil - vol
 print v_th max_gain vil voh vih vol nmh nml
 ```
+
+**Transconductance (Gm)**
+
+Transconductance is defined as the ratio of change in drain current and change in Vgs (Gate-source Voltage).
+
+```
+let gm = real(deriv(id, nfet_in))
+plot gm
+meas dc gm_max MAX gm
+```
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/32c47faf-53e0-4fb1-a690-b3790e1962cf" />
+
+**Frequency (f)**
+
+```
+tran 0.1 100p                         
+meas tran tr when nfet_in=0.07 RISE=1  
+meas tran tf when nfet_out=0.63 FALL=1 
+let t_delay = tr + tf                  
+print t_delay                         
+let f = 1/t_delay                     
+print f 
+```
+**Output Resistance**
+
+The output resistance is defined as the ratio of output node voltage and the change in drain current.
+
+```
+let r_out= deriv(nfet_out,id)   
+plot r_out                      
+```
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/6cbf80b3-3420-4e9f-baac-eb9ab069bfa5" />
+
+**Transient Analysis: Vin, Vout waveforms**
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/d4fd7920-f256-4662-bbbb-0a1fe14645cf" />
+
+```
+tran 1e-12 100e-12
+meas tran tpr when nfet_in = 0.35 rise = 1
+meas tran tpf when nfet_out = 0.35 fall = 1
+let tp = (tpr + tpf) / 2
+let trans_current = v2#branch
+meas tran id_pwr integ trans_current from=2e-11 to=6e-11
+let pwr = id_pwr * 0.7
+let power = abs(pwr / 40e-12)
+print tpr tpf tp id_pwr pwr power
+```
+
+**Switching Energy, Avg. Power**
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/826d5c0f-7b40-47d3-88a1-c151849287e6" />
+
+```
+let Id_transient = v2#branch
+plot Id_transient
+meas tran Id_peak_transient min Id_transient
+
+** Total Energy, Avg. Power per cycle
+* Integral t1 to t2:
+*   t1 = start of pulse waveform (=PULSE_TD)
+*   t2 = end   of pulse waveform (= t1 + [tr+pw+tf])
+let t1 = 20p
+let t2 = t1 + (10p+40p+10p)
+meas TRAN Integral_Id INTEG Id_transient from={t1} to={t2}
+let energy_per_cycle = abs(Integral_Id * VDD_V)
+let avg_power = (energy_per_cycle / 60e-12)
+```
+
+
+
+
+
 
 
 
