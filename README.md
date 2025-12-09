@@ -2,7 +2,7 @@
 
 <img width="1049" height="562" alt="image" src="https://github.com/user-attachments/assets/cd02d152-ea06-49b4-a147-cad76b9556b4" />
 
-Supercomputers have rapidly evolved from Gigaflop performance in the 1980s to Teraflop in the late 1990s, Petaflop systems around 2008, and Exaflop machines achieved in 2021. The next major milestone is Zettascale computing (1 Zettaflop = \(10^{21}\) FLOPS), expected by 2035. This advancement demands massive increases in computational performance, driven by more powerful CPUs and GPUs, while also pushing power consumption toward the 50–100 MW range for future Zetta-scale systems. The overall trend shows performance doubling every 1–2 years, enabling breakthroughs in AI, scientific modeling, climate simulation, and space research.
+Supercomputers have rapidly evolved from Gigaflop performance in the 1980s to Teraflop in the late 1990s, Petaflop systems around 2008, and Exaflop machines achieved in 2021. The next major milestone is Zettascale computing (1 Zettaflop = $10^{21}$ FLOPS), expected by 2035. This advancement demands massive increases in computational performance, driven by more powerful CPUs and GPUs, while also pushing power consumption toward the 50–100 MW range for future Zetta-scale systems. The overall trend shows performance doubling every 1–2 years, enabling breakthroughs in AI, scientific modeling, climate simulation, and space research.
 
 # Introduction To FinFETs
 
