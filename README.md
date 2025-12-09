@@ -165,7 +165,7 @@ By decoupling power and signaling layers, BS-PDN provides both power integrity a
 
 <img width="1048" height="565" alt="image" src="https://github.com/user-attachments/assets/122f113d-4d47-4e6c-8aaf-a735d9964aca" />
 
-## Lab Implementations 
+## Lab Implementations 1
 
 **ASAP 7nm PDK**
 
@@ -577,6 +577,57 @@ meas TRAN Integral_Id INTEG Id_transient from={t1} to={t2}
 let energy_per_cycle = abs(Integral_Id * VDD_V)
 let avg_power = (energy_per_cycle / 60e-12)
 ```
+
+## Lab Implementations 2
+
+**Design of a BandGap Reference Circuit**
+
+<img width="886" height="558" alt="image" src="https://github.com/user-attachments/assets/e7a68144-a1fc-4960-94c7-17b0bf9102b2" />
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/20bf6303-682f-49a6-b3c6-3275c0fdc452" />
+
+**VCTAT**
+
+<img width="654" height="547" alt="image" src="https://github.com/user-attachments/assets/f25c3923-be5f-4e6c-aa73-564e85a2020e" />
+
+**VPTAT**
+
+<img width="677" height="568" alt="image" src="https://github.com/user-attachments/assets/76e99f7d-8ca3-4a2e-aba2-d6601e3e205b" />
+
+**VREF**
+
+<img width="650" height="545" alt="image" src="https://github.com/user-attachments/assets/1e83335b-b9d9-4032-8351-e3d79c87beaa" />
+
+**d(vref/dT)**
+
+<img width="654" height="553" alt="image" src="https://github.com/user-attachments/assets/69d45eb1-7a94-46a7-baa6-5f4e3f4f4113" />
+
+**VDD = 1V, Temp = 27C**
+
+**VREF**
+
+<img width="639" height="540" alt="image" src="https://github.com/user-attachments/assets/b6e82712-d2e4-497c-99f1-0e3ec40f0b24" />
+
+**VPTAT**
+
+<img width="642" height="527" alt="image" src="https://github.com/user-attachments/assets/47fdec4c-3bb1-47da-93d4-6312cd6733d1" />
+
+**VCTAT**
+
+<img width="660" height="541" alt="image" src="https://github.com/user-attachments/assets/53e17ea8-6ff0-47d5-b975-249559d0000e" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
