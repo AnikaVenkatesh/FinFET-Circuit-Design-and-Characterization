@@ -1,5 +1,7 @@
 # FinFET-Circuit-Design-and-Characterization
 
+
+
 <img width="1049" height="562" alt="image" src="https://github.com/user-attachments/assets/cd02d152-ea06-49b4-a147-cad76b9556b4" />
 
 Supercomputers have rapidly evolved from Gigaflop performance in the 1980s to Teraflop in the late 1990s, Petaflop systems around 2008, and Exaflop machines achieved in 2021. The next major milestone is Zettascale computing (1 Zettaflop = $10^{21}$ FLOPS), expected by 2035. This advancement demands massive increases in computational performance, driven by more powerful CPUs and GPUs, while also pushing power consumption toward the 50–100 MW range for future Zetta-scale systems. The overall trend shows performance doubling every 1–2 years, enabling breakthroughs in AI, scientific modeling, climate simulation, and space research.
@@ -437,6 +439,9 @@ pre_osdi /home/vsduser/Desktop/asap_7nm_Xschem/bsimcmg.osdi
 .end
 ```
 
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/e8087795-e341-4a88-854d-5f3ea19eb528" />
+
+
 **Switching Threshold Voltage**
 
 <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/c3be29ae-e9cf-4103-9295-e76cb9932ab3" />
@@ -577,6 +582,12 @@ meas TRAN Integral_Id INTEG Id_transient from={t1} to={t2}
 let energy_per_cycle = abs(Integral_Id * VDD_V)
 let avg_power = (energy_per_cycle / 60e-12)
 ```
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/371e6e40-7d0a-47de-bbfd-f613039a97b4" />
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/26b330d9-045f-4bfc-8cf2-d512dbd19673" />
+
+
 
 ## Lab Implementations 2
 
