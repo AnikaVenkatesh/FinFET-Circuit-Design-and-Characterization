@@ -21,3 +21,19 @@ All of this together enabled FinFETs to operate at lower supply voltage while st
 
 In short, FinFETs rescued CMOS scaling when planar devices reached their physical limit. They sustained Moore’s Law for an entire decade by restoring electrostatic integrity, improving leakage and variability, offering higher drive current, and enabling reduced-power operation — while setting the path toward the next evolution of transistor architecture: Gate-All-Around (GAA) nanosheet and nanowire FETs, where the channel will be fully surrounded by the gate for even tighter control.
 
+#1. Standard Cell Area Scaling
+
+As process nodes advance into deeply-scaled geometries, aggressive shrinking of traditional parameters such as gate pitch or metal pitch becomes increasingly difficult and expensive. To continue densification without driving manufacturing complexity beyond economic limits, the industry relies on scaling boosters — structural and layout innovations applied through Design-Technology Co-Optimization (DTCO). These boosters enable similar density benefits while keeping yield and process cost under control.
+
+<img width="1036" height="557" alt="image" src="https://github.com/user-attachments/assets/0b9bda2e-58f9-4ef5-950e-f989b2ce7c0f" />
+
+<img width="1049" height="570" alt="image" src="https://github.com/user-attachments/assets/6a9213de-04e4-4a8f-b96a-614aa8689cc0" />
+
+**A. Track Reduction (Fin Depopulation – in FinFET libraries)**
+
+Track reduction improves standard-cell density by reducing the number of fins per transistor or lowering the height of the active region. This decreases the standard-cell height (track count), enabling more cells to fit vertically within the same silicon footprint. Although it provides a clear density advantage, fin depopulation may reduce drive current and impose energy-performance trade-offs, since fewer fins mean reduced effective channel width and hence lower \(I_{\text{ON}}\)
+
+
+
+
+
