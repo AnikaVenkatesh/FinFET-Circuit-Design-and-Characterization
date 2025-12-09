@@ -165,6 +165,8 @@ By decoupling power and signaling layers, BS-PDN provides both power integrity a
 
 <img width="1048" height="565" alt="image" src="https://github.com/user-attachments/assets/122f113d-4d47-4e6c-8aaf-a735d9964aca" />
 
+## Lab Implementations 
+
 
 
 
