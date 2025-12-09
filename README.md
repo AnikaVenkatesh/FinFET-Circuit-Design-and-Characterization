@@ -97,9 +97,76 @@ So even though GAA gives great electrostatic control, its narrower conduction wi
 
 - number of nanosheets and their stacking
 
--silicide/contact material resistivity
+- silicide/contact material resistivity
 
 If $R_{\text{ext}}$ remains large, gains in $I_{\text{ON}}$ and $SS$ cannot be realized, meaning GAA scaling demands aggressive resistance engineering.
+
+## Device Scaling
+
+<img width="1037" height="558" alt="image" src="https://github.com/user-attachments/assets/b0df998c-dd2c-42fd-9b06-2060b7152f39" />
+
+As gate lengths shrink into the sub-5 nm regime, conventional silicon transistors begin to encounter fundamental physical limits. When the channel becomes extremely short, electrons can directly tunnel from source to drain instead of going over the potential barrier. This source-to-drain tunneling increases leakage current exponentially, making it impossible to maintain low standby power. Suppressing tunneling requires channel materials with higher carrier effective mass ($m^*$), so that electrons behave less like waves and have lower penetration probability across the barrier.
+
+At these scales, surface roughness and thickness fluctuations also have a strong impact on electrostatics, degrading the ability of the gate to control the channel. Therefore, the material must be atomically smooth and uniform so that the threshold voltage does not vary from device to device. Another critical factor is that capacitance from the drain ($C_D$) becomes comparable to or larger than gate oxide capacitance ($C_{OX}$), which increases the subthreshold slope and worsens off-state leakage. Reducing this requires materials with low in-plane dielectric constant ($\varepsilon$).
+
+Because silicon cannot satisfy all these constraints simultaneously at such small dimensions, scaling pushes us toward new channel materials. Transition-Metal Dichalcogenides (TMDs)—such as MoS$_2$, WS$_2$, MoTe$_2$, and WSe$_2$—provide the required properties:
+
+Atomically thin layers (1–3 atoms thick → perfect electrostatics)
+
+Higher effective mass ($m^*$) → reduced tunneling
+
+Tunable bandgap → optimized leakage–performance trade-off
+
+These advantages have enabled TMD-based transistors to demonstrate gate lengths as small as 1 nm, using a carbon-nanotube gate electrode, while maintaining strong switching characteristics. Dual-gate MoS$2$ MOSFETs show up to 100× reduction in tunneling leakage when compared to Si devices, while achieving near-ideal subthreshold swing (~65 mV/dec) and **high $I{\text{ON}}/I_{\text{OFF}}$ ratios (~10⁶)**. This combination of ultra-short-channel operation and energy-efficient switching makes TMDs a highly promising option for future technology nodes when industry moves beyond the scaling limits of silicon.
+
+## BEOL Innovations
+
+While transistor scaling continues to deliver improvements in density and speed, the interconnect layers in the Back-End-Of-Line (BEOL) have become the dominant system-level bottleneck. As metal lines shrink, resistance increases sharply due to electron scattering in narrow structures, and capacitance does not scale at the same rate — leading to interconnect-dominated delay, power loss, and reliability challenges. To maintain overall chip performance, modern process nodes must rely on manufacturing and architectural innovations in BEOL rather than depending solely on device scaling.
+
+<img width="1039" height="534" alt="image" src="https://github.com/user-attachments/assets/3d1b4d1e-2db6-4a12-bee4-83e4882bbd90" />
+
+**1. Extending Copper Interconnect Scaling**
+
+Copper (Cu) has served as the industry’s primary interconnect metal for decades, but at pitches ≤ 28 nm, its resistivity rises drastically due to:
+
+- Surface and grain-boundary scattering
+
+- Barrier/liner overhead consuming a larger fraction of cross-sectional area
+
+Manufacturers have prolonged Cu usability through dual → single damascene transitions and barrier/via metal optimization, reducing via resistance by ~50%. These improvements help Cu remain viable down to ≈ 3 nm node, but beyond this, further scaling becomes cost-inefficient and resistivity-limited.
+
+**2. Transition to Non-Copper Metals (Post-Cu Damascene Era)**
+
+As Cu scaling approaches its physical limit, alternative metals such as Ru, Co, Mo, Rh, Ir are being adopted. Unlike copper, these metals can be used barrier-less in subtractive patterning processes, enabling taller and more conductive lines at extremely tight pitches.
+
+Benefits of Post-Cu interconnect metals:
+
+- Improved electromigration reliability, enabling longer operational lifetime
+
+- Lower resistivity at nanoscale due to reduced scattering
+
+- Barrier-less integration → more conductive cross-section
+This transition ensures interconnect performance continues to scale even when Cu stagnates.
+
+**3. Back-Side Power Delivery Network (BS-PDN)**
+
+In classical Front-Side PDN (FS-PDN), power and signal lines compete for limited routing area in BEOL, creating severe IR-drop and routing congestion.
+Back-Side PDN solves this by relocating power vias through the backside of the wafer, separating power delivery from signal interconnects.
+
+Advantages demonstrated in measurements:
+
+- IR-drop reduction (≈ 23–95% improvement in static and dynamic IR drop)
+
+- More front-side routing tracks for signals → improved timing and reduced RC delay
+
+- Standard-cell height reduction (6T → 5T libraries), increasing logic density
+
+By decoupling power and signaling layers, BS-PDN provides both power integrity and layout density benefits, making it a key enabler for nodes below 2 nm.
+
+<img width="1048" height="565" alt="image" src="https://github.com/user-attachments/assets/122f113d-4d47-4e6c-8aaf-a735d9964aca" />
+
+
+
 
 
 
