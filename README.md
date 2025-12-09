@@ -109,13 +109,13 @@ As gate lengths shrink into the sub-5 nm regime, conventional silicon transistor
 
 At these scales, surface roughness and thickness fluctuations also have a strong impact on electrostatics, degrading the ability of the gate to control the channel. Therefore, the material must be atomically smooth and uniform so that the threshold voltage does not vary from device to device. Another critical factor is that capacitance from the drain ($C_D$) becomes comparable to or larger than gate oxide capacitance ($C_{OX}$), which increases the subthreshold slope and worsens off-state leakage. Reducing this requires materials with low in-plane dielectric constant ($\varepsilon$).
 
-Because silicon cannot satisfy all these constraints simultaneously at such small dimensions, scaling pushes us toward new channel materials. Transition-Metal Dichalcogenides (TMDs)—such as MoS$_2$, WS$_2$, MoTe$_2$, and WSe$_2$—provide the required properties:
+Because silicon cannot satisfy all these constraints simultaneously at such small dimensions, scaling pushes us toward new channel materials. Transition-Metal Dichalcogenides (TMDs)—such as$MoS_2$, $WS_2$, $MoTe_2$, $WSe_2$ provide the required properties:
 
-Atomically thin layers (1–3 atoms thick → perfect electrostatics)
+- Atomically thin layers (1–3 atoms thick → perfect electrostatics)
 
-Higher effective mass ($m^*$) → reduced tunneling
+- Higher effective mass ($m^*$) → reduced tunneling
 
-Tunable bandgap → optimized leakage–performance trade-off
+- Tunable bandgap → optimized leakage–performance trade-off
 
 These advantages have enabled TMD-based transistors to demonstrate gate lengths as small as 1 nm, using a carbon-nanotube gate electrode, while maintaining strong switching characteristics. Dual-gate MoS$2$ MOSFETs show up to 100× reduction in tunneling leakage when compared to Si devices, while achieving near-ideal subthreshold swing (~65 mV/dec) and **high $I{\text{ON}}/I_{\text{OFF}}$ ratios (~10⁶)**. This combination of ultra-short-channel operation and energy-efficient switching makes TMDs a highly promising option for future technology nodes when industry moves beyond the scaling limits of silicon.
 
