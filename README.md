@@ -69,12 +69,13 @@ Thus, capacitance engineering has become a primary scaling vector. New materials
 
 Earlier planar MOSFETs maintained a balance where channel resistance $R_{\text{ch}}$ dominated conduction. But in modern 3D devices, scaling the gate length reduces $R_{\text{ch}}$ rapidly, while contact and access resistance $R_{\text{ext}}$ fail to scale at the same rate. The images show the geometry-driven shift between device architectures:
 
-| Device            | Effective Current Path Width (WC/WG)                                        | Dominance                    |
-| ----------------- | --------------------------------------------------------------------------- | ---------------------------- |
-| **Planar MOSFET** | $ \approx 1 $                                                               | Channel-dominated            |
-| **FinFET**        | $ \approx \frac{W_C}{W_G} \approx \frac{P}{2H_f + D_f} \approx \frac{1}{3}$ | Balanced                     |
-| **GAAFET**        | $ \approx \frac{1}{6}$                                                      | Access-dominated             |
-| **CFET**          | Multiple stacked channels                                                   | Even worse access bottleneck |
+| Device | Effective Current Path Width ($\frac{W_C}{W_G}$) | Dominance |
+|--------|--------------------------------------------------|-----------|
+| **Planar MOSFET** | $\frac{W_C}{W_G} \approx 1$ | Channel-dominated |
+| **FinFET** | $\frac{W_C}{W_G} \approx \frac{P}{2H_f + D_f} \approx \frac{1}{3}$ | Balanced |
+| **GAAFET** | $\frac{W_C}{W_G} \approx \frac{1}{6}$ | Access-dominated |
+| **CFET** | Multiple stacked channels → narrower path | Even worse access bottleneck |
+
 
 
 Correspondingly, the resistance ratio shifts as:
@@ -88,15 +89,15 @@ Correspondingly, the resistance ratio shifts as:
 
 So even though GAA gives great electrostatic control, its narrower conduction width means contact and access resistance become the new bottleneck. Device performance is therefore less limited by mobility, and more limited by:
 
-contact interface quality
+- contact interface quality
 
-source/drain resistance
+- source/drain resistance
 
-raised S/D epi design
+- raised S/D epi design
 
-number of nanosheets and their stacking
+- number of nanosheets and their stacking
 
-silicide/contact material resistivity
+-silicide/contact material resistivity
 
 If $R_{\text{ext}}$ remains large, gains in $I_{\text{ON}}$ and $SS$ cannot be realized, meaning GAA scaling demands aggressive resistance engineering.
 
