@@ -167,6 +167,12 @@ By decoupling power and signaling layers, BS-PDN provides both power integrity a
 
 ## Lab Implementations 
 
+**ASAP 7nm PDK**
+
+The ASAP 7nm Process Design Kit (PDK) is an open-source, academic design kit developed to model the characteristics of a 7 nm FinFET technology node. Instead of providing confidential foundry-specific details, ASAP7 delivers predictive transistor and interconnect models that allow researchers and designers to explore advanced-node design techniques without proprietary access restrictions.
+
+ASAP7 includes complete design rules, device models, standard-cell libraries, and interconnect stacks, enabling accurate optimization of PPA — Performance, Power, Area. The kit also supports industry-standard EDA flows, making it suitable for RTL-to-GDSII demonstrations, architecture exploration, and CAD research.
+
 
 
 
