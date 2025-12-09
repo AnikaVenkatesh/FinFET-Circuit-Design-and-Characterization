@@ -1,5 +1,10 @@
 # FinFET-Circuit-Design-and-Characterization
 
+<img width="585" height="455" alt="image" src="https://github.com/user-attachments/assets/0fcd884c-f4b8-40b0-969f-186083dc327e" />
+
+
+This repository documents my learning experience from a 10-day FinFET Design and Device-Level Characterization workshop by VSD Corp. Pvt. Ltd. The sessions provided practical exposure to ASAP7 PDK, enabling transistor-level modeling, SPICE simulations, and extraction of critical design parameters essential for advanced CMOS technology nodes.
+
 
 
 <img width="1049" height="562" alt="image" src="https://github.com/user-attachments/assets/cd02d152-ea06-49b4-a147-cad76b9556b4" />
