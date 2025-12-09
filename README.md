@@ -173,6 +173,21 @@ The ASAP 7nm Process Design Kit (PDK) is an open-source, academic design kit dev
 
 ASAP7 includes complete design rules, device models, standard-cell libraries, and interconnect stacks, enabling accurate optimization of PPA — Performance, Power, Area. The kit also supports industry-standard EDA flows, making it suitable for RTL-to-GDSII demonstrations, architecture exploration, and CAD research.
 
+**Characterization of CMOS VTC**
+
+**Nfet Id and Vd Characteristics**
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/6d85cf93-5988-46aa-aa4d-3446105a12b5" />
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/6fac87ae-e0b1-401c-a204-448723b4a676" />
+
+**Plot of Id vs Vd**
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/5b993665-493a-4e9a-8fac-a1779336fe2d" />
+
+
+
+
 
 
 
