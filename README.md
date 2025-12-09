@@ -446,6 +446,68 @@ meas dc v_th when nfet_out = nfet_in
 plot nfet_out nfet_in
 ```
 
+**Drain Current (Id)**
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/2ed55613-68a3-42c8-84c5-0a13bb4d7fec" />
+
+
+```
+let id = v2#branch
+plot id
+```
+**Power Consumption**
+
+Average power is obtained by integrating the transient drain current over one switching cycle, multiplying by $V_{DD}$, and dividing by the signal period.
+
+```
+let trans_current = v2#branch
+meas tran id_pwr integ trans_current from=20e-12 to=60e-12
+let pwr = id_pwr *0.7
+let power = abs(pwr/40)
+print power
+```
+
+**Propagation Delay (Tp)**
+
+Propagation delay of a logic gate (e.g., an inverter) is the time difference between the input reaching 50% of its transition and the output reaching 50% of its corresponding transition.
+Rise time ($t_r$) is the time it takes the output to move from 10% → 90% of its final high level, while fall time ($t_f$) is the time taken to move from 90% → 10% of the high level.
+Some design methodologies instead use 30% ↔ 70% thresholds depending on the specification requirements.
+
+```
+meas tran tpr when nfet_in=0.35 RISE=1 : Measures the rise time (tpr) when the input voltage reaches 0.35V
+meas tran tpf when nfet_out=0.35 FALL=1 : Measures the fall time (tpf) when the output voltage reaches 0.35V. 
+let tp = (tpf + tpr)/2 : Calculates the average propagation delay (tp) as the mean of the rise and fall times.
+print tp : prints the Propagation Delay
+```
+
+**Gain (Av)**
+
+Gain represents how much the output voltage changes in response to a small change at the input essentially the ratio of output variation to input variation.
+
+```
+let gain_av=deriv(nfet_out) : this gives out negative gain
+
+let gain_av=abs(deriv(nfet_out)) : Gives the absolute value of gain.
+plot gain
+```
+
+**Noise Margin**
+
+Noise margin represents how much noise the VTC can tolerate without corrupting digital logic levels.
+NMH = $V_{OH} - V_{IH}$ ensures a valid logic-high;
+NML = $V_{IL} - V_{OL}$ ensures a valid logic-low.
+Higher margins → better noise immunity.
+
+```
+meas dc vil find nfet_in when gain_av = gain_target cross=1
+meas dc voh find nfet_out when gain_av = gain_target cross=1
+meas dc vih find nfet_in when gain_av = gain_target cross=2
+meas dc vol find nfet_out when gain_av = gain_target cross=2
+let nmh = voh - vih
+let nml = vil - vol
+print v_th max_gain vil voh vih vol nmh nml
+```
+
 
 
 
