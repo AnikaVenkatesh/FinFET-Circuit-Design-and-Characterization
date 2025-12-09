@@ -50,7 +50,7 @@ Buried Power Rail (BPR) moves these rails below the device layer, freeing the BE
 
 ## Parasitic Resistance And Capacitance
 
-1. Parasitic Capacitance
+**1. Parasitic Capacitance**
 
 <img width="1046" height="571" alt="image" src="https://github.com/user-attachments/assets/34c437d4-ea5a-4aa4-bf4a-34e4055296f4" />
 
@@ -63,7 +63,7 @@ even a few percent increase in parasitics causes direct performance penalties. T
 
 Thus, capacitance engineering has become a primary scaling vector. New materials, air spacers, and smaller gate-contact landing areas are now critical to ensure $C_{\text{eff}}$ does not rise as physical dimensions shrink.
 
-2. Parasitic Resistance
+**2. Parasitic Resistance**
 
 <img width="1036" height="562" alt="image" src="https://github.com/user-attachments/assets/5e538986-d901-42e7-834e-3385a4480fef" />
 
@@ -79,7 +79,11 @@ Earlier planar MOSFETs maintained a balance where channel resistance $R_{\text{c
 
 Correspondingly, the resistance ratio shifts as:
   $\frac{R_{\text{ext}}}{R_{\text{ch}}} < 1$ (Planar)
+
+  
   $\frac{R_{\text{ext}}}{R_{\text{ch}}} \approx 1$ (FinFET)
+
+  
   $\frac{R_{\text{ext}}}{R_{\text{ch}}} \approx 3$ (GAAFET / CFET)
 
 So even though GAA gives great electrostatic control, its narrower conduction width means contact and access resistance become the new bottleneck. Device performance is therefore less limited by mobility, and more limited by:
