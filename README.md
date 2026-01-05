@@ -633,6 +633,18 @@ let avg_power = (energy_per_cycle / 60e-12)
 
 <img width="660" height="541" alt="image" src="https://github.com/user-attachments/assets/53e17ea8-6ff0-47d5-b975-249559d0000e" />
 
+# **Certificate**
+
+<img width="1065" height="753" alt="image" src="https://github.com/user-attachments/assets/6f623153-1af0-44bf-be35-4ef793b3e0e8" />
+
+# **Acknowledgements**
+
+I would like to express my sincere gratitude to:
+
+- [Kunal Ghosh](https://github.com/kunalg123) – Co-founder, VSD Corp. Pvt. Ltd.
+
+
+
 
 
 
